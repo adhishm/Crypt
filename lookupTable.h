@@ -40,6 +40,7 @@ namespace Crypt
     
     bool updateCodeLetter (char codeLetter, char sourceLetter);
     void displayLookupTable() const;
+    bool getSourceLetter (char codeLetter, char &sourceLetter);
   };
 }	// namespace Crypt
 

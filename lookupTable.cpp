@@ -94,3 +94,27 @@ void LookupTable::displayLookupTable() const
   cout << endl;
 }
 
+bool LookupTable::getSourceLetter(char codeLetter, char& sourceLetter)
+{
+  bool found = false;
+  
+  for (int i=0; i<26; ++i)
+  {
+    if (codeLetter == _codeLetters[i])
+    {
+      found = true;
+      sourceLetter = _sourceLetters[i];
+      break;
+    }
+    
+    if (codeLetter == _codeLetters_caps[i])
+    {
+      found = true;
+      sourceLetter = _sourceLetters_caps[i];
+      break;
+    }
+  }
+  
+  return found;
+}
+
