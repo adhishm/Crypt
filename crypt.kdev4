@@ -1,0 +1,4 @@
+[Project]
+Name=crypt
+Manager=KDevCMakeManager
+VersionControl=kdevgit
