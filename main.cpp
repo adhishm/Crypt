@@ -16,6 +16,9 @@ int main(int argc, char **argv)
     {
       EncryptedMessage* encryptedMessage = new EncryptedMessage(filename);
       encryptedMessage->decryptText();
+      
+      delete encryptedMessage;
+      encryptedMessage = NULL;
     }
     
     return 0;
