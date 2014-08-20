@@ -27,8 +27,8 @@ void LookupTable::_initializeCodeVectors()
   int i = 0;
   
   // Allocate memory for the vectors
-  _codeLetters.assign(26, capsStart);
-  _codeLetters_caps.assign(26, smallStart);
+  _codeLetters.assign(26, smallStart);
+  _codeLetters_caps.assign(26, capsStart);
   
   while (i < 26)
   {
@@ -36,14 +36,14 @@ void LookupTable::_initializeCodeVectors()
     ++capsStart;
     ++smallStart;
     
-    _codeLetters[i] = capsStart;
-    _codeLetters_caps[i] = smallStart;
+    _codeLetters[i] = smallStart;
+    _codeLetters_caps[i] = capsStart;
   }
 }
 
 void LookupTable::_initializeSourceVectors()
 {
-  char defaultChar = '_';
+  char defaultChar = '-';
   
   _sourceLetters.assign(26,defaultChar);
   _sourceLetters_caps.assign(26,defaultChar);
@@ -79,7 +79,7 @@ void LookupTable::displayLookupTable() const
 {
   int i;
   
-  cout << "Code:   ";
+  cout << "\nCode:   ";
   
   for (i=0; i<26; ++i)
   {
